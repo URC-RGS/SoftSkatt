@@ -1,7 +1,7 @@
 from machine import Pin, PWM
 from time import sleep
 
-servoPin = PWM(Pin(19))
+servoPin = PWM(Pin(18))
 servoPin.freq(50)
 
 def servo(degrees):

@@ -9,10 +9,10 @@ from RovLogging import RovLogger
 
 # # запуск на одноплатном пк rock
 # # путь до конфиг файла
-PATH_CONFIG = '/home/rock/SoftSkatt/raspberry-pult/config_pult.ini'
+PATH_CONFIG = '/home/rock/SoftSkatt-main/raspberry-pult/config_pult.ini'
 
 # # путь до файлика с логами 
-PATH_LOG = '/home/rock/SoftSkatt/raspberry-pult/log/'
+PATH_LOG = '/home/rock/SoftSkatt-main/raspberry-pult/log/'
 
 # запуск на одноплатном пк pi4 
 # путь до конфиг файла

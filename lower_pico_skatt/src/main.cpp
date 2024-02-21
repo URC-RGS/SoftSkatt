@@ -71,16 +71,18 @@ void setup() {
   servos[5].setAutoDetach(false);
   servos[5].setDirection(REVERSE_MOTOR_5);
 
-  // подключаем камеру 
-  servos[6].attach(PIN_SERVO_CAM, 600, 2400);
-  servos[6].setSpeed(100);
-  servos[6].setAccel(0);
+  servos[6].attach(PIN_SERVO_CAM, 1000, 2000);
+  servos[6].setSpeed(SPEED_SERVO);
+  servos[6].setAccel(ACCELERATE_SERVO);
+  servos[6].writeMicroseconds(1500);
+  servos[6].setAutoDetach(false);
 
-  // подключаем манипулятор
-  servos[7].attach(PIN_SERVO_ARM, 600, 2400);
-  servos[7].setSpeed(200);
-  servos[7].setAccel(0.99);
-  servos[7].writeMicroseconds(2000);
+  servos[7].attach(PIN_SERVO_ARM, 1000, 2000);
+  servos[7].setSpeed(SPEED_SERVO);
+  servos[7].setAccel(ACCELERATE_SERVO);
+  servos[7].writeMicroseconds(1500);
+  servos[7].setAutoDetach(false);
+
   digitalWrite(LED_BUILTIN, LOW);
 
   // инициализируем моторы 

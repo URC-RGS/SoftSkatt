@@ -199,9 +199,9 @@ class Control_Box:
                 
             if value_joi['gripper'] == 1:
                 self.value_out_pwm[9] = self.config_rov['gripper_max']
-            else:
+            elif value_joi['gripper'] == -1:
                 self.value_out_pwm[9] = self.config_rov['gripper_min']
-                
+                          
                 
             self.value_out_pwm[10] = int(1000 + value_joi['led'] * 1000)
             

@@ -197,9 +197,9 @@ class Control_Box:
             # elif self.value_out_pwm[9] >= 2000:
             #     self.value_out_pwm[9] = 2000 
                 
-            if value_joi['gripper'] == 1:
+            if value_joi['gripper'] == -1:
                 self.value_out_pwm[9] = self.config_rov['gripper_max']
-            elif value_joi['gripper'] == -1:
+            elif value_joi['gripper'] == 1:
                 self.value_out_pwm[9] = self.config_rov['gripper_min']
                           
                 

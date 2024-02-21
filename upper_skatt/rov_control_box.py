@@ -98,8 +98,8 @@ class Control_Box:
             # [M0, M1, M2, M3, M4, M5, M6, M7, CAM(8), GRIPPER(9), LED(10)]
             # математика моторов 2000 - вперед (для манипулятора закрыть) (для светильника включить); 1000 - назад (для манипулятора открыть) (для светильника выключить)   
             self.value_out_pwm[0] = int((1500 + value_joi['linear_x'] * 500) + (1500 + value_joi['rotate_y'] * 500) + (1500 + value_joi['linear_z'] * 500) - 3000)
-            self.value_out_pwm[1] = int((1500 + value_joi['linear_x'] * 650) - (1500 + value_joi['rotate_y'] * 500) - (1500 + value_joi['linear_z'] * 500) + 3000)
-            self.value_out_pwm[2] = int(-1 * (1500 + value_joi['linear_x'] * 650) + (1500 + value_joi['rotate_y'] * 500) - (1500 + value_joi['linear_z'] * 500) + 3000)
+            self.value_out_pwm[1] = int((1500 + value_joi['linear_x'] * 600) - (1500 + value_joi['rotate_y'] * 500) - (1500 + value_joi['linear_z'] * 500) + 3000)
+            self.value_out_pwm[2] = int(-1 * (1500 + value_joi['linear_x'] * 600) + (1500 + value_joi['rotate_y'] * 500) - (1500 + value_joi['linear_z'] * 500) + 3000)
             self.value_out_pwm[3] = int(-1 * (1490 + value_joi['linear_x'] * 500) - (1490 + value_joi['rotate_y'] * 500) + (1490 + value_joi['linear_z'] * 500) + 3000) 
             self.value_out_pwm[4] = int(1500 + value_joi['linear_y'] * 800 + (1510 + value_joi['rotate_x'] * 500) - 1500)
             self.value_out_pwm[5] = int(1500 + value_joi['linear_y'] * 400 - (1500 + value_joi['rotate_x'] * 500) + 1500)

@@ -9,8 +9,8 @@ from pprint import pprint
 
 
 # # запуск на одноплатном пк rock
-PATH_CONFIG = '/home/rock/SoftAcademic/upperAcademic/config_control_box.json'
-PATH_LOG = '/home/rock/SoftAcademic/upperAcademic/.log/'
+PATH_CONFIG = '/home/rock/SoftSkatt/upperAcademic/config_control_box.json'
+PATH_LOG = '/home/rock/SoftSkatt/upperAcademic/.log/'
 
 # # запуск на компьютере в офисе 
 # PATH_CONFIG = 'C:/Users/Yarik/Documents/SoftAcademic/upperAcademic/config_control_box.json'

@@ -20,8 +20,8 @@
 
     "ROV" : {
 
-        "power_linear_x" : 0.75, 
-        "power_linear_y" : 0.9,
+        "power_linear_x" : 0.5, 
+        "power_linear_y" : 0.5,
         "power_linear_z" : 0.5,
 
         "power_rotate_x" : 0.5,
@@ -36,7 +36,7 @@
         "reverse_rotate_y" : false,
         "reverse_rotate_z" : false,
 
-        "motor_scheme": 4,
+        "motor_scheme": 6,
 
         "reverse_motor_0" : false,
         "reverse_motor_1" : false,
@@ -53,7 +53,7 @@
 
         "step_gripper" : 10,
         "gripper_min" : 1000,
-        "gripper_max" : 2000
+        "gripper_max" : 1500
 
     },
 

@@ -32,44 +32,38 @@ void setup() {
   servos[0].attach(PIN_MOTOR_0, 1000, 2000);
   servos[0].setSpeed(SPEED_MOTORS);
   servos[0].setAccel(ACCEL_MOTORS);
-  servos[0].writeMicroseconds(1500);
   servos[0].setAutoDetach(false);
-  servos[0].setDirection(REVERSE_MOTOR_0);
+  // servos[0].setDirection(REVERSE_MOTOR_0);
 
   servos[1].attach(PIN_MOTOR_1, 1000, 2000);
   servos[1].setSpeed(SPEED_MOTORS);
   servos[1].setAccel(ACCEL_MOTORS);
-  servos[1].writeMicroseconds(1500);
   servos[1].setAutoDetach(false);
-  servos[1].setDirection(REVERSE_MOTOR_1);
+  // servos[1].setDirection(REVERSE_MOTOR_1);
 
   servos[2].attach(PIN_MOTOR_2, 1000, 2000);
   servos[2].setSpeed(SPEED_MOTORS);
   servos[2].setAccel(ACCEL_MOTORS);
-  servos[2].writeMicroseconds(1500);
   servos[2].setAutoDetach(false);
-  servos[2].setDirection(REVERSE_MOTOR_2);
+  // servos[2].setDirection(REVERSE_MOTOR_2);
 
   servos[3].attach(PIN_MOTOR_3, 1000, 2000);
   servos[3].setSpeed(SPEED_MOTORS);
   servos[3].setAccel(ACCEL_MOTORS);
-  servos[3].writeMicroseconds(1500);
   servos[3].setAutoDetach(false);
-  servos[3].setDirection(REVERSE_MOTOR_3);
+  // servos[3].setDirection(REVERSE_MOTOR_3);
 
   servos[4].attach(PIN_MOTOR_4, 1000, 2000);
   servos[4].setSpeed(SPEED_MOTORS);
   servos[4].setAccel(ACCEL_MOTORS);
-  servos[4].writeMicroseconds(1500);
   servos[4].setAutoDetach(false);
-  servos[4].setDirection(REVERSE_MOTOR_4);
+  // servos[4].setDirection(REVERSE_MOTOR_4);
 
   servos[5].attach(PIN_MOTOR_5, 1000, 2000);
   servos[5].setSpeed(SPEED_MOTORS);
   servos[5].setAccel(ACCEL_MOTORS);
-  servos[5].writeMicroseconds(1500);
   servos[5].setAutoDetach(false);
-  servos[5].setDirection(REVERSE_MOTOR_5);
+  // servos[5].setDirection(REVERSE_MOTOR_5);
 
   servos[6].attach(PIN_SERVO_CAM, 1000, 2000);
   servos[6].setSpeed(SPEED_SERVO);
@@ -83,10 +77,30 @@ void setup() {
   servos[7].writeMicroseconds(1500);
   servos[7].setAutoDetach(false);
 
+  servos[0].writeMicroseconds(2000);
+  servos[1].writeMicroseconds(2000);
+  servos[2].writeMicroseconds(2000);
+  servos[3].writeMicroseconds(2000);
+  servos[4].writeMicroseconds(2000);
+  servos[5].writeMicroseconds(2000);
+  delay(5000);
+  // servos[0].writeMicroseconds(1000);
+  // servos[1].writeMicroseconds(1000);
+  // servos[2].writeMicroseconds(1000);
+  // servos[3].writeMicroseconds(1000);
+  // servos[4].writeMicroseconds(1000);
+  // servos[5].writeMicroseconds(1000);
+  // delay(5000);
+  servos[0].writeMicroseconds(1500);
+  servos[1].writeMicroseconds(1500);
+  servos[2].writeMicroseconds(1500);
+  servos[3].writeMicroseconds(1510);
+  servos[4].writeMicroseconds(1500);
+  servos[5].writeMicroseconds(1500);
+  delay(5000);
+
   digitalWrite(LED_BUILTIN, LOW);
 
-  // инициализируем моторы 
-  delay(2000);
 }
 
 void loop() {
@@ -122,10 +136,10 @@ void loop() {
 
       // отправляем значения движители 
       servos[0].writeMicroseconds(data_input[0]);
-      servos[1].writeMicroseconds(data_input[1]);
+      servos[1].writeMicroseconds(3000 - data_input[1]);
       servos[2].writeMicroseconds(data_input[2]);
-      servos[3].writeMicroseconds(data_input[3]);
-      servos[4].writeMicroseconds(data_input[4]);
+      servos[3].writeMicroseconds(3000 - data_input[3]);
+      servos[4].writeMicroseconds(3000 - data_input[4]);
       servos[5].writeMicroseconds(data_input[5]);
 
       // отправляем значения на сервопривод камеры и манипулятора 

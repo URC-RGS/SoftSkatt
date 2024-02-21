@@ -17,14 +17,6 @@ const uint16_t PIN_MOTOR_4 = 4;
 const uint16_t PIN_MOTOR_5 = 5;
 
 
-const bool REVERSE_MOTOR_0 = false;
-const bool REVERSE_MOTOR_1 = true;
-const bool REVERSE_MOTOR_2 = false;
-const bool REVERSE_MOTOR_3 = true;
-const bool REVERSE_MOTOR_4 = true;
-const bool REVERSE_MOTOR_5 = false;
-
-
 const float_t ACCEL_MOTORS = 4.0;
 const uint16_t SPEED_MOTORS = 2500;
 

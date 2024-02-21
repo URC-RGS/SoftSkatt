@@ -101,8 +101,8 @@ class Control_Box:
             self.value_out_pwm[1] = int((1500 + value_joi['linear_x'] * 500) - (1500 + value_joi['rotate_y'] * 500) - (1500 + value_joi['linear_z'] * 500) + 3000)
             self.value_out_pwm[2] = int(-1 * (1500 + value_joi['linear_x'] * 500) - (1500 + value_joi['rotate_y'] * 500) + (1500 + value_joi['linear_z'] * 500) + 3000)
             self.value_out_pwm[3] = int(-1 * (1490 + value_joi['linear_x'] * 500) + (1490 + value_joi['rotate_y'] * 500) - (1490 + value_joi['linear_z'] * 500) + 3000) 
-            self.value_out_pwm[4] = int(1500 + value_joi['linear_y'] * 700 + (1510 + value_joi['rotate_x'] * 500) - 1500)
-            self.value_out_pwm[5] = int(1500 + value_joi['linear_y'] * 500 - (1500 + value_joi['rotate_x'] * 500) + 1500)
+            self.value_out_pwm[4] = int(1500 + value_joi['linear_y'] * 750 + (1510 + value_joi['rotate_x'] * 500) - 1500)
+            self.value_out_pwm[5] = int(1500 + value_joi['linear_y'] * 400 - (1500 + value_joi['rotate_x'] * 500) + 1500)
             
     # TODO дописать, взять за основу протеус 
     def math_eight_motors_off_PID(self, value_joi):

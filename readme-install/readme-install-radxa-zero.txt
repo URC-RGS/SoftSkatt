@@ -65,6 +65,7 @@
 
         scan on
 
+
         # надо найти джойскик и подставить его мак адрес в три команды ниже (без скобочек)
  
         pair <mac>
@@ -93,7 +94,7 @@ overlays=meson-g12a-uart-ao-a-on-gpioao-0-gpioao-1 meson-g12a-uart-ao-b-on-gpioa
 
         # добавить с конец файла
 
-        @reboot sleep 1 && /usr/bin/python3 /home/rock/SoftAcademic/raspberry-pult/Rov_pult.py &
+        @reboot sleep 1 && /usr/bin/python3 /home/rock/SoftAcademic/upperAcademic/rov_control_box.py &
 
 3) (опционально) настройка коэффицентов движителей
     # переходим в директорию с конфигом 

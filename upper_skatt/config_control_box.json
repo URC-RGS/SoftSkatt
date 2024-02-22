@@ -20,9 +20,9 @@
 
     "ROV" : {
 
-        "power_linear_x" : 0.7, 
-        "power_linear_y" : 1.0,
-        "power_linear_z" : 1.0,
+        "power_linear_x" : 0.6, 
+        "power_linear_y" : 0.7,
+        "power_linear_z" : 0.6,
 
         "power_rotate_x" : 0.7,
         "power_rotate_y" : 0.7,
@@ -33,7 +33,7 @@
         "reverse_linear_z" : false,
 
         "reverse_rotate_x" : false,
-        "reverse_rotate_y" : false,
+        "reverse_rotate_y" : true,
         "reverse_rotate_z" : false,
 
         "motor_scheme": 6,

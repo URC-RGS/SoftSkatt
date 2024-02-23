@@ -97,25 +97,25 @@ class Control_Box:
             # сложение векторов и преобразование в частот шим 
             # [M0, M1, M2, M3, M4, M5, M6, M7, CAM(8), GRIPPER(9), LED(10)]
             # математика моторов 2000 - вперед (для манипулятора закрыть) (для светильника включить); 1000 - назад (для манипулятора открыть) (для светильника выключить)   
-        if value_joi['rotate_x'] > 0:
-            value_joi['rotate_x'] *= 1
-        elif value_joi['rotate_x'] < 0:
-            value_joi['rotate_x'] *= 1
+        # if value_joi['rotate_x'] > 0:
+        #     value_joi['rotate_x'] *= 1
+        # elif value_joi['rotate_x'] < 0:
+        #     value_joi['rotate_x'] *= 1
         
-        if value_joi['linear_x'] > 0:
-            value_joi['linear_x'] *= 1
-        elif value_joi['linear_x'] < 0:
-            value_joi['linear_x'] *= 1
+        # if value_joi['linear_x'] > 0:
+        #     value_joi['linear_x'] *= 1
+        # elif value_joi['linear_x'] < 0:
+        #     value_joi['linear_x'] *= 1
                 
-        if value_joi['rotate_y'] > 0:
-            value_joi['rotate_y'] *= 1.5
-        elif value_joi['rotate_y'] < 0:
-            value_joi['rotate_y'] *= 1
+        # if value_joi['rotate_y'] > 0:
+        #     value_joi['rotate_y'] *= 1.5
+        # elif value_joi['rotate_y'] < 0:
+        #     value_joi['rotate_y'] *= 1
             
-        if value_joi['linear_y'] > 0:
-            value_joi['linear_y'] *= 1
-        elif value_joi['linear_y'] < 0:
-            value_joi['linear_y'] *= 1
+        # if value_joi['linear_y'] > 0:
+        #     value_joi['linear_y'] *= 1
+        # elif value_joi['linear_y'] < 0:
+        #     value_joi['linear_y'] *= 1
             
             
             self.value_out_pwm[0] = int((1500 + value_joi['linear_x'] * 500) + (1500 + value_joi['rotate_y'] * 500) + (1500 + value_joi['linear_z'] * 500) - 3000)

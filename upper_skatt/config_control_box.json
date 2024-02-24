@@ -20,7 +20,7 @@
 
     "ROV" : {
 
-        "power_linear_x" : 0.65, 
+        "power_linear_x" : 0.95, 
         "power_linear_y" : 0.7,
         "power_linear_z" : 0.6,
 

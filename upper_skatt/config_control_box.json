@@ -21,7 +21,7 @@
     "ROV" : {
 
         "power_linear_x" : 1, 
-        "power_linear_y" : 1,
+        "power_linear_y" : 0.85,
         "power_linear_z" : 0.6,
 
         "power_rotate_x" : 0.7,

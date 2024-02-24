@@ -110,7 +110,7 @@ class Control_Box:
         if value_joi['rotate_y'] > 0:
             value_joi['rotate_y'] *= 1
         elif value_joi['rotate_y'] < 0:
-            value_joi['rotate_y'] *= 1
+            value_joi['rotate_y'] *= 1.5
             
         if value_joi['linear_y'] > 0:
             value_joi['linear_y'] *= 1

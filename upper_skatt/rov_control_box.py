@@ -129,6 +129,29 @@ class Control_Box:
         self.value_out_pwm[3] = int(-1 * (1490 + value_joi['linear_x'] * 500) - (1490 + value_joi['rotate_y'] * 500) + (1490 + value_joi['linear_z'] * 500) + 3000) 
         self.value_out_pwm[4] = int(1500 + value_joi['linear_y'] * 800 + (1510 + value_joi['rotate_x'] * 500) - 1500)
         self.value_out_pwm[5] = int(1500 + value_joi['linear_y'] * 400 - (1500 + value_joi['rotate_x'] * 500) + 1500)
+        
+        # из-за двигателя сделана затычка 
+        if self.value_out_pwm[0] >= 1300 and self.value_out_pwm[0] < 1500:
+            self.value_out_pwm[0] = 1300
+        elif self.value_out_pwm[0] > 1501 and self.value_out_pwm[0] <= 1770:
+            self.value_out_pwm[0] = 1770
+        
+        if self.value_out_pwm[1] >= 1300 and self.value_out_pwm[1] < 1500:
+            self.value_out_pwm[1] = 1300
+        elif self.value_out_pwm[1] > 1501 and self.value_out_pwm[1] <= 1770:
+            self.value_out_pwm[1] = 1770
+            
+        if self.value_out_pwm[2] >= 1300 and self.value_out_pwm[2] < 1500:
+            self.value_out_pwm[2] = 1300
+        elif self.value_out_pwm[2] > 1501 and self.value_out_pwm[2] <= 1770:
+            self.value_out_pwm[2] = 1770
+        
+        if self.value_out_pwm[3] >= 1300 and self.value_out_pwm[3] < 1500:
+            self.value_out_pwm[3] = 1300
+        elif self.value_out_pwm[3] > 1501 and self.value_out_pwm[3] <= 1770:
+            self.value_out_pwm[3] = 1770
+            
+            
             
     # TODO дописать, взять за основу протеус 
     def math_eight_motors_off_PID(self, value_joi):

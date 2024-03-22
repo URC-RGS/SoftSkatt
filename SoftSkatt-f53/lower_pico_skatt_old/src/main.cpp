@@ -104,7 +104,7 @@ void setup() {
 }
 
 void loop() {
-  if (millis()- turnTimer >= 15){
+  if (millis()- turnTimer >= 10){
     turnTimer = millis();
     servos[0].tick();
     servos[1].tick();

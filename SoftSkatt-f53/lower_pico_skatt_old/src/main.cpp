@@ -50,7 +50,7 @@ void setup() {
   servos[3].attach(PIN_MOTOR_3, 1000, 2000);
   servos[3].setSpeed(SPEED_MOTORS);
   servos[3].setAccel(ACCEL_MOTORS);
-  servos[3].setAutoDetach(false);
+  servos[3].setAutoDetach(true);
   // servos[3].setDirection(REVERSE_MOTOR_3);
 
   servos[4].attach(PIN_MOTOR_4, 1000, 2000);
@@ -138,7 +138,7 @@ void loop() {
       servos[0].writeMicroseconds(data_input[0]);
       servos[1].writeMicroseconds(3000 - data_input[1]);
       servos[2].writeMicroseconds(data_input[2]);
-      servos[3].writeMicroseconds(3000 - data_input[3]);
+      // servos[3].writeMicroseconds(3000 - data_input[3]);
       servos[4].writeMicroseconds(3000 - data_input[4]);
       servos[5].writeMicroseconds(data_input[5]);
 

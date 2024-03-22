@@ -8,10 +8,10 @@
 
 AsyncStream<100> serial(&Serial, '\n');
 AsyncStream<100> serial1(&Serial1, '\n');
-AsyncStream<100> serial2(&Serial2, '\n');
 LiquidCrystal_I2C lcd(0x27, 20, 4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 uint32_t turnTimer;
+uint32_t workTimer;
 int ledState = LOW;
 
 float yaw = 0;
@@ -20,6 +20,12 @@ float depth = 0;
 float volt = 0;
 
 void setup() {
+
+  Wire.setSDA(20);
+	Wire.setSCL(21);
+  Wire.begin();
+  delay(100);
+
   Serial.begin(BITRATE);
 
   // подключение сериала для общения с роботом 
@@ -27,38 +33,22 @@ void setup() {
   Serial1.setTX(UART_0_TX);
   Serial1.begin(BITRATE);
   pinMode(UART_COM, OUTPUT);
-  digitalWrite(UART_COM, HIGH);
-
-  // подключение сериала для общения с постом управления 
-  Serial2.setRX(UART_1_RX);
-  Serial2.setTX(UART_1_TX);
-  Serial2.begin(BITRATE);
+  digitalWrite(UART_COM, LOW);
 
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(19, OUTPUT);
 
   lcd.init();
   lcd.backlight();
-  delay(1000);
+
+  delay(100);
 }
 
 void loop() {
-
-  // мониторим порт верхнего уровня
-  if (serial2.available()) {     
-    // отправка на робота 
-    // digitalWrite(UART_COM, HIGH);
-    // delay(50);
-    Serial1.println(serial2.buf);  
-    if (DEBUG) Serial.println(serial2.buf);
-    // delay(50);
-    // digitalWrite(UART_COM, LOW);  
-    
-  }
-
   // мониторим порт общения с роботом 
-  if (serial1.available()) {   
-    // if (DEBUG) Serial.println(serial1.buf);
+  if (serial1.available()) {
+
+    if (DEBUG) Serial.println(serial1.buf);
     
     GParser data = GParser(serial1.buf, ' ');
 
@@ -86,11 +76,14 @@ void loop() {
 
     digitalWrite(LED_BUILTIN, ledState);
 
-   }
+  }
 }
 
 
 void loop1() {
+  if (millis() - workTimer >= 350){
+    workTimer = millis();
+
     Serial.print("yaw: "); 
     Serial.print(yaw); 
     Serial.print("  "); 
@@ -121,5 +114,5 @@ void loop1() {
     lcd.print("volt: ");
     lcd.print(volt);
 
-    delay(350);
+  }  
 }
